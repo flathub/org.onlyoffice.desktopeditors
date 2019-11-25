@@ -74,10 +74,6 @@
                 },
                 {
                     "type": "file",
-                    "path": "org.onlyoffice.desktopeditors.metainfo.xml"
-                },
-                {
-                    "type": "file",
                     "path": "asc-de-16.png"
                 },
                 {
