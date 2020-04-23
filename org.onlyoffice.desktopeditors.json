@@ -47,11 +47,6 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/common/usr/bin/desktopeditors.m4",
-                    "sha256": "f97f37f7cf6b944d2f9513a68e78ee9b5d3f34fc6be6669dd68c7927c0913d5f"
-                },
-                {
-                    "type": "file",
                     "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/branding/common/usr/share/applications/variables.m4",
                     "sha256": "06a150698f42b485d6270936e2f6c465a82f6cfd808f2fbc256948eb40e0e5b3"
                 },
