@@ -25,17 +25,18 @@
             "name": "desktopeditors",
             "buildsystem": "simple",
             "build-commands": [
-                "ar x onlyoffice-desktopeditors_amd64.deb data.tar.xz && tar xf data.tar.xz ./usr/bin/onlyoffice-desktopeditors ./usr/share/applications/onlyoffice-desktopeditors.desktop",
-                "sed -i -e 's|/opt/onlyoffice/desktopeditors|/app/bin/opt/onlyoffice/desktopeditors|g' usr/bin/onlyoffice-desktopeditors",
-                "sed -i -e 's|check_templates$| |g' usr/bin/onlyoffice-desktopeditors",
-                "install -Dm755 usr/bin/onlyoffice-desktopeditors /app/bin/desktopeditors",
+                "m4 -D M4_COMPANY_NAME='ONLYOFFICE' -D M4_DESKTOPEDITORS_PREFIX='onlyoffice/desktopeditors' desktopeditors.m4 > desktop-editors",
+                "m4 -D M4_COMPANY_NAME='ONLYOFFICE' -D M4_PRODUCT_NAME='desktopeditors' -D M4_DESKTOPEDITORS_EXEC='onlyoffice-desktopeditors' -D M4_PACKAGE_NAME='onlyoffice-desktopeditors' desktopeditors.desktop.m4 > desktopeditors.desktop",
+                "sed -i -e 's|/opt/onlyoffice/desktopeditors|/app/bin/opt/onlyoffice/desktopeditors|g' desktop-editors",
+                "sed -i -e '/check_templates$/ d' desktop-editors",
+                "install -Dm755 desktop-editors /app/bin/desktopeditors",
                 "cp /usr/bin/ar /app/bin",
                 "mkdir -p /app/bin/opt/onlyoffice",
                 "mv desktopeditors /app/bin/opt/onlyoffice/desktopeditors",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
                 "install -Dm755 org.onlyoffice.desktopeditors.metainfo.xml /app/share/metainfo/org.onlyoffice.desktopeditors.metainfo.xml",
                 "mkdir -p /app/share/applications",
-                "sed 's|Icon=.*|Icon=org.onlyoffice.desktopeditors|; s|Exec=.*|Exec=desktopeditors|;' usr/share/applications/onlyoffice-desktopeditors.desktop > /app/share/applications/org.onlyoffice.desktopeditors.desktop",
+                "sed 's|Icon=.*|Icon=org.onlyoffice.desktopeditors|; s|Exec=.*|Exec=desktopeditors|;' desktopeditors.desktop > /app/share/applications/org.onlyoffice.desktopeditors.desktop",
                 "for icon_size in 16 24 32 48 64 128 256; do
                         install -Dm644 asc-de-${icon_size}.png /app/share/icons/hicolor/${icon_size}x${icon_size}/apps/org.onlyoffice.desktopeditors.png
                     done"
@@ -43,8 +44,18 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/ONLYOFFICE-DesktopEditors-5.5.1/onlyoffice-desktopeditors_amd64.deb",
-                    "sha256": "2e56595cebd0b2d248c4e52b96c8167c56ab52bb1ac6e9d8aaf3f99a31f97fff"
+                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/common/usr/share/applications/desktopeditors.desktop.m4",
+                    "sha256": "30a1b8c0d84ac4071893fae3e900da399623c3db0868ef214a525431eca590b0"
+                },
+                {
+                    "type": "file",
+                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/common/usr/bin/desktopeditors.m4",
+                    "sha256": "f97f37f7cf6b944d2f9513a68e78ee9b5d3f34fc6be6669dd68c7927c0913d5f"
+                },
+                {
+                    "type": "file",
+                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/branding/common/usr/share/applications/variables.m4",
+                    "sha256": "06a150698f42b485d6270936e2f6c465a82f6cfd808f2fbc256948eb40e0e5b3"
                 },
                 {
                     "type": "archive",
