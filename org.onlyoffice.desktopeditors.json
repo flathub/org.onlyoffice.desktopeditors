@@ -25,10 +25,7 @@
             "name": "desktopeditors",
             "buildsystem": "simple",
             "build-commands": [
-                "m4 -D M4_COMPANY_NAME='ONLYOFFICE' -D M4_DESKTOPEDITORS_PREFIX='onlyoffice/desktopeditors' desktopeditors.m4 > desktop-editors",
                 "m4 -D M4_COMPANY_NAME='ONLYOFFICE' -D M4_PRODUCT_NAME='desktopeditors' -D M4_DESKTOPEDITORS_EXEC='onlyoffice-desktopeditors' -D M4_PACKAGE_NAME='onlyoffice-desktopeditors' desktopeditors.desktop.m4 > desktopeditors.desktop",
-                "sed -i -e 's|/opt/onlyoffice/desktopeditors|/app/bin/opt/onlyoffice/desktopeditors|g' desktop-editors",
-                "sed -i -e '/check_templates$/ d' desktop-editors",
                 "install -Dm755 desktop-editors /app/bin/desktopeditors",
                 "cp /usr/bin/ar /app/bin",
                 "mkdir -p /app/bin/opt/onlyoffice",
@@ -37,6 +34,7 @@
                 "install -Dm755 org.onlyoffice.desktopeditors.metainfo.xml /app/share/metainfo/org.onlyoffice.desktopeditors.metainfo.xml",
                 "mkdir -p /app/share/applications",
                 "sed 's|Icon=.*|Icon=org.onlyoffice.desktopeditors|; s|Exec=.*|Exec=desktopeditors|;' desktopeditors.desktop > /app/share/applications/org.onlyoffice.desktopeditors.desktop",
+                "sed -i -e '/Actions=/a StartupWMClass=onlyoffice' /app/share/applications/org.onlyoffice.desktopeditors.desktop",
                 "for icon_size in 16 24 32 48 64 128 256; do
                         install -Dm644 asc-de-${icon_size}.png /app/share/icons/hicolor/${icon_size}x${icon_size}/apps/org.onlyoffice.desktopeditors.png
                     done"
@@ -62,6 +60,15 @@
                     "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/ONLYOFFICE-DesktopEditors-5.5.1/onlyoffice-desktopeditors-x64.tar.gz",
                     "sha256": "0d1c0e5601592977e66e39dfa901532845408c5402f5e93f2f3875efacea52ce",
                     "strip-components": 0
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "desktop-editors",
+                    "commands": [
+                      "export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH",
+                      "cd /app/bin/opt/onlyoffice/desktopeditors/",
+                      "exec ./DesktopEditors $@"
+                    ]
                 },
                 {
                     "type": "file",
