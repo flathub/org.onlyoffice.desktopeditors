@@ -24,6 +24,7 @@
   </content_rating>
   <releases>
     <release version="5.4.1" date="2019-11-05" />
+    <release version="test1" date="test2" />
   </releases>
   <update_contact>nick_at_onlyoffice.com</update_contact>
 </component>
