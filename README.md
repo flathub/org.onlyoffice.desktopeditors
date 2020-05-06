@@ -48,7 +48,7 @@ All steps tested on Ubuntu 18.04
 4. Build and install the application
 
    ```shell script
-   sudo flatpak-builder build org.onlyoffice.desktopeditors.json --force-clean --install
+   flatpak-builder build org.onlyoffice.desktopeditors.json --force-clean --install
    ```
 
 5. Run the application
