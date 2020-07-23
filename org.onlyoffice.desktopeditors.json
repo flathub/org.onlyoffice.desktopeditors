@@ -38,7 +38,7 @@
                 "for icon_size in 16 24 32 48 64 128 256; do
                         install -Dm644 asc-de-${icon_size}.png /app/share/icons/hicolor/${icon_size}x${icon_size}/apps/org.onlyoffice.desktopeditors.png
                     done"
-            ], 
+            ],
             "sources": [
                 {
                     "type": "file",
