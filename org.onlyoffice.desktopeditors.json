@@ -13,11 +13,7 @@
         "--socket=wayland",
         "--socket=pulseaudio",
         "--share=network",
-        "--filesystem=xdg-pictures",
-        "--filesystem=xdg-desktop",
-        "--filesystem=xdg-videos",
-        "--filesystem=xdg-documents",
-        "--filesystem=xdg-download",
+        "--filesystem=host",
         "--device=all"
     ],
     "modules": [
