@@ -18,7 +18,7 @@
         "--filesystem=xdg-videos",
         "--filesystem=xdg-documents",
         "--filesystem=xdg-download",
-        "--env=LC_ALL=C.UTF-8",
+        "--env=LC_ALL=C.UTF-8", 
         "--device=all"
     ],
     "modules": [
