@@ -53,8 +53,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/ONLYOFFICE-DesktopEditors-6.0.2/onlyoffice-desktopeditors-x64.tar.gz",
-                    "sha256": "05f7c4f371c27993f0eacb9c0bb8ad82cf581cc90052d9ba0db7bcd0cd7dea9f", 
+                    "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v6.1.0/onlyoffice-desktopeditors-6.1.0-90-x64.tar.gz",
+                    "sha256": "21accb96b0ed73f4d1b4b19bf7357b11774b99c2091473e51cc05a3911089915", 
                     "strip-components": 0
                 },
                 {
