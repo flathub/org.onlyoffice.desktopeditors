@@ -30,6 +30,7 @@
                 "install -Dm755 desktop-editors /app/bin/desktopeditors",
                 "cp /usr/bin/ar /app/bin",
                 "mkdir -p /app/bin/opt/onlyoffice",
+                "mv desktopeditors/DesktopEditors desktopeditors/OnlyOffice\ Desktop\ Editors",
                 "mv desktopeditors /app/bin/opt/onlyoffice/desktopeditors",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
                 "install -Dm755 org.onlyoffice.desktopeditors.metainfo.xml /app/share/metainfo/org.onlyoffice.desktopeditors.metainfo.xml",
@@ -63,7 +64,7 @@
                     "commands": [
                       "export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH",
                       "cd /app/bin/opt/onlyoffice/desktopeditors/",
-                      "exec ./DesktopEditors \"$@\""
+                      "exec ./OnlyOffice\ Desktop\ Editors \"$@\""
                     ]
                 },
                 {
