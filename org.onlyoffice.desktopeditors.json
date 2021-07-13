@@ -45,7 +45,7 @@
                 {
                     "type": "file",
                     "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/common/usr/share/applications/desktopeditors.desktop.m4",
-                    "sha256": "30a1b8c0d84ac4071893fae3e900da399623c3db0868ef214a525431eca590b0"
+                    "sha256": "d9e00a6d0a0839b18203271f22754f0c64fadb5f70b3435e5d8a1193e94c5d2a"
                 },
                 {
                     "type": "file",
@@ -54,8 +54,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v6.2.0/onlyoffice-desktopeditors-x64.tar.gz",
-                    "sha256": "d834523ff5aaa51662de7fab8196b553eb7c141ee153cff450d29f1307a3b771", 
+                    "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v6.3.1/onlyoffice-desktopeditors-x64.tar.gz",
+                    "sha256": "b1debf8e4c188094879bb9ffade5d59810020a1d949160cc8cb480ccc999371d", 
                     "strip-components": 0
                 },
                 {
