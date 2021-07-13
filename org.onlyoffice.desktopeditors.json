@@ -30,6 +30,7 @@
                 "install -Dm755 desktop-editors /app/bin/desktopeditors",
                 "cp /usr/bin/ar /app/bin",
                 "mkdir -p /app/bin/opt/onlyoffice",
+                "mv desktopeditors/DesktopEditors \"desktopeditors/OnlyOffice Desktop Editors\"",
                 "mv desktopeditors /app/bin/opt/onlyoffice/desktopeditors",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
                 "install -Dm755 org.onlyoffice.desktopeditors.metainfo.xml /app/share/metainfo/org.onlyoffice.desktopeditors.metainfo.xml",
@@ -44,7 +45,7 @@
                 {
                     "type": "file",
                     "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/common/usr/share/applications/desktopeditors.desktop.m4",
-                    "sha256": "30a1b8c0d84ac4071893fae3e900da399623c3db0868ef214a525431eca590b0"
+                    "sha256": "d9e00a6d0a0839b18203271f22754f0c64fadb5f70b3435e5d8a1193e94c5d2a"
                 },
                 {
                     "type": "file",
@@ -63,7 +64,7 @@
                     "commands": [
                       "export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH",
                       "cd /app/bin/opt/onlyoffice/desktopeditors/",
-                      "exec ./DesktopEditors \"$@\""
+                      "exec \"./OnlyOffice Desktop Editors\" \"$@\""
                     ]
                 },
                 {
