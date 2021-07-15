@@ -26,7 +26,7 @@
             "name": "desktopeditors",
             "buildsystem": "simple",
             "build-commands": [
-                "m4 -D M4_COMPANY_NAME='ONLYOFFICE' -D M4_PRODUCT_NAME='desktopeditors' -D M4_DESKTOPEDITORS_EXEC='onlyoffice-desktopeditors' -D M4_PACKAGE_NAME='onlyoffice-desktopeditors' desktopeditors.desktop.m4 > desktopeditors.desktop",
+                "m4 -D M4_COMPANY_NAME='ONLYOFFICE' -D M4_PRODUCT_NAME='Desktop Editors' -D M4_DESKTOPEDITORS_EXEC='onlyoffice-desktopeditors' -D M4_PACKAGE_NAME='onlyoffice-desktopeditors' desktopeditors.desktop.m4 > desktopeditors.desktop",
                 "install -Dm755 desktop-editors /app/bin/desktopeditors",
                 "cp /usr/bin/ar /app/bin",
                 "mkdir -p /app/bin/opt/onlyoffice",
@@ -34,7 +34,7 @@
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
                 "install -Dm755 org.onlyoffice.desktopeditors.metainfo.xml /app/share/metainfo/org.onlyoffice.desktopeditors.metainfo.xml",
                 "mkdir -p /app/share/applications",
-                "sed 's|Icon=.*|Icon=org.onlyoffice.desktopeditors|; s|Exec=.* %F|Exec=desktopeditors %F|;' desktopeditors.desktop > /app/share/applications/org.onlyoffice.desktopeditors.desktop",
+                "sed 's|Icon=.*|Icon=org.onlyoffice.desktopeditors|; s|Exec=.* %U|Exec=desktopeditors %U|;' desktopeditors.desktop > /app/share/applications/org.onlyoffice.desktopeditors.desktop",
                 "sed -i -e '/Actions=/a StartupWMClass=onlyoffice' /app/share/applications/org.onlyoffice.desktopeditors.desktop",
                 "for icon_size in 16 24 32 48 64 128 256; do
                         install -Dm644 asc-de-${icon_size}.png /app/share/icons/hicolor/${icon_size}x${icon_size}/apps/org.onlyoffice.desktopeditors.png
@@ -43,7 +43,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "path": "desktopeditors.desktop.m4"
+                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/common/usr/share/applications/desktopeditors.desktop.m4",
+                    "sha256": "d9e00a6d0a0839b18203271f22754f0c64fadb5f70b3435e5d8a1193e94c5d2a"
                 },
                 {
                     "type": "file",
