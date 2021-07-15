@@ -26,7 +26,7 @@
             "name": "desktopeditors",
             "buildsystem": "simple",
             "build-commands": [
-                "m4 -D M4_COMPANY_NAME='ONLYOFFICE' -D M4_PRODUCT_NAME='Desktop Editors' -D M4_DESKTOPEDITORS_EXEC='onlyoffice-desktopeditors' -D M4_PACKAGE_NAME='onlyoffice-desktopeditors' desktopeditors.desktop.m4 > desktopeditors.desktop",
+                "m4 -D M4_COMPANY_NAME='ONLYOFFICE' -D M4_PRODUCT_NAME='desktopeditors' -D M4_DESKTOPEDITORS_EXEC='onlyoffice-desktopeditors' -D M4_PACKAGE_NAME='onlyoffice-desktopeditors' desktopeditors.desktop.m4 > desktopeditors.desktop",
                 "install -Dm755 desktop-editors /app/bin/desktopeditors",
                 "cp /usr/bin/ar /app/bin",
                 "mkdir -p /app/bin/opt/onlyoffice",
