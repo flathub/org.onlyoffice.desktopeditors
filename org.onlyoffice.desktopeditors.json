@@ -43,8 +43,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/common/usr/share/applications/desktopeditors.desktop.m4",
-                    "sha256": "d9e00a6d0a0839b18203271f22754f0c64fadb5f70b3435e5d8a1193e94c5d2a"
+                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/8c746ee8cac5cd1c5b4133a330bcf1304bb096f6/win-linux/package/linux/common/usr/share/applications/desktopeditors.desktop.m4",
+                    "sha256": "30a1b8c0d84ac4071893fae3e900da399623c3db0868ef214a525431eca590b0"
                 },
                 {
                     "type": "file",
