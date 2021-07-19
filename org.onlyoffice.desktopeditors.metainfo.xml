@@ -5,7 +5,7 @@
   <developer_name>ONLYOFFICE</developer_name>
   <summary>Office productivity suite</summary>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>LicenseRef-AGPL-3.0</project_license>
+  <project_license>AGPL-3.0-only</project_license>
   <url type="homepage">https://onlyoffice.com</url>
   <icon type="remote" height="256" width="256">https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_72,h_72/https://dashboard.snapcraft.io/site_media/appmedia/2018/01/icon_IzCN8xA.png</icon>
   <description>
