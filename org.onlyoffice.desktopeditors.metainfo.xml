@@ -13,24 +13,8 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/textdocument.jpg</image>
-      <caption>Text document</caption>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/spreadsheet.jpg</image>
-      <caption>Spreadsheet</caption>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/presentation.jpg</image>
-      <caption>Presentation</caption>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/connect_portal1.jpg</image>
-      <caption>Connect portal</caption>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/connect_portal2.jpg</image>
-      <caption>Connect portal</caption>
+      <image type="source">https://static-www.onlyoffice.com/v9.5.0/images/mainpage/may2018/editors/document-short.jpg</image>
+      <caption>Main window</caption>
     </screenshot>
   </screenshots>
   <kudos>
