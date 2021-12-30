@@ -26,7 +26,6 @@
             "name": "desktopeditors",
             "buildsystem": "simple",
             "build-commands": [
-                "m4 -D M4_COMPANY_NAME='ONLYOFFICE' -D M4_PRODUCT_NAME='Desktop Editors' -D M4_DESKTOPEDITORS_EXEC='onlyoffice-desktopeditors' -D M4_PACKAGE_NAME='onlyoffice-desktopeditors' desktopeditors.desktop.m4 > desktopeditors.desktop",
                 "install -Dm755 desktop-editors /app/bin/desktopeditors",
                 "cp /usr/bin/ar /app/bin",
                 "mkdir -p /app/bin/opt/onlyoffice",
@@ -34,27 +33,17 @@
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
                 "install -Dm755 org.onlyoffice.desktopeditors.metainfo.xml /app/share/metainfo/org.onlyoffice.desktopeditors.metainfo.xml",
                 "mkdir -p /app/share/applications",
-                "sed 's|Icon=.*|Icon=org.onlyoffice.desktopeditors|; s|Exec=.* %U|Exec=desktopeditors %U|;' desktopeditors.desktop > /app/share/applications/org.onlyoffice.desktopeditors.desktop",
+                "sed 's|Icon=.*|Icon=org.onlyoffice.desktopeditors|; s|Exec=.* %U|Exec=desktopeditors %U|;' /app/bin/opt/onlyoffice/desktopeditors/app/onlyoffice-desktopeditors.desktop > /app/share/applications/org.onlyoffice.desktopeditors.desktop",
                 "sed -i -e '/Actions=/a StartupWMClass=onlyoffice' /app/share/applications/org.onlyoffice.desktopeditors.desktop",
                 "for icon_size in 16 24 32 48 64 128 256; do
-                        install -Dm644 asc-de-${icon_size}.png /app/share/icons/hicolor/${icon_size}x${icon_size}/apps/org.onlyoffice.desktopeditors.png
+                        install -Dm644 /app/bin/opt/onlyoffice/desktopeditors/asc-de-${icon_size}.png /app/share/icons/hicolor/${icon_size}x${icon_size}/apps/org.onlyoffice.desktopeditors.png
                     done"
             ],
             "sources": [
                 {
-                    "type": "file",
-                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/common/usr/share/applications/desktopeditors.desktop.m4",
-                    "sha256": "d9e00a6d0a0839b18203271f22754f0c64fadb5f70b3435e5d8a1193e94c5d2a"
-                },
-                {
-                    "type": "file",
-                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/branding/common/usr/share/applications/variables.m4",
-                    "sha256": "06a150698f42b485d6270936e2f6c465a82f6cfd808f2fbc256948eb40e0e5b3"
-                },
-                {
                     "type": "archive",
-                    "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v6.4.2/onlyoffice-desktopeditors-x64.tar.gz", 
-                    "sha256": "2ac4f9ba8b8ae0bc764327b215f143f88a73de2d69419c33e82d7c68d3db1816", 
+                    "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-7.0.0-x64.tar.gz", 
+                    "sha256": "ade1564c3f91b7de7c567cbb7fb35918adfac5c62990f03ef7c3ddb8e93748cd", 
                     "strip-components": 0
                 },
                 {
@@ -69,41 +58,6 @@
                 {
                     "type": "file",
                     "path": "org.onlyoffice.desktopeditors.metainfo.xml"
-                },
-                {
-                    "type": "file",
-                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/branding/common/opt/desktopeditors/asc-de-16.png",
-                    "sha256": "b3e4bb7e1118a9a3128dca37d5c55f82889b0da607cfd306933c3a4bc015e4f4"
-                },
-                {
-                    "type": "file",
-                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/branding/common/opt/desktopeditors/asc-de-24.png",
-                    "sha256": "29aa0a2606bb2b9ba3a589d1a4f2b97cba8e02b8dbae31cf27400d219859572b"
-                },
-                {
-                    "type": "file",
-                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/branding/common/opt/desktopeditors/asc-de-32.png",
-                    "sha256": "454075d3b8150e973f450c02ea47d0b1232c63d9dedc6ab16af3114636c4f78c"
-                },
-                {
-                    "type": "file",
-                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/branding/common/opt/desktopeditors/asc-de-48.png",
-                    "sha256": "040b9fd4d2fba976ed31eb0c6e1e8cd2e35a294c81fe334915bb18a6e8ba03e4"
-                },
-                {
-                    "type": "file",
-                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/branding/common/opt/desktopeditors/asc-de-64.png",
-                    "sha256": "a027e39d130fe9ef265be13a117769dc8e7542b9d57b477c46c0e3f8f831fa0d"
-                },
-                {
-                    "type": "file",
-                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/branding/common/opt/desktopeditors/asc-de-128.png",
-                    "sha256": "9691f9fb0c8df8d47a7b18b8634e5b0240c717300d7674b54b41cffb7931a45f"
-                },
-                {
-                    "type": "file",
-                    "url": "https://raw.githubusercontent.com/ONLYOFFICE/desktop-apps/master/win-linux/package/linux/branding/common/opt/desktopeditors/asc-de-256.png",
-                    "sha256": "05b7ef9d8fdf4f1cdaab58e3fc65002e2f7d55f295b9577bd4f9b2620db31b7e"
                 }
             ]
         }
