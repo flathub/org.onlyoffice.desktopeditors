@@ -33,7 +33,8 @@
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
                 "install -Dm755 org.onlyoffice.desktopeditors.metainfo.xml /app/share/metainfo/org.onlyoffice.desktopeditors.metainfo.xml",
                 "mkdir -p /app/share/applications",
-                "sed 's|Icon=.*|Icon=org.onlyoffice.desktopeditors|; s|Exec=.* %U|Exec=desktopeditors %U|;' /app/bin/opt/onlyoffice/desktopeditors/app/onlyoffice-desktopeditors.desktop > /app/share/applications/org.onlyoffice.desktopeditors.desktop", 
+                "sed 's|Icon=.*|Icon=org.onlyoffice.desktopeditors|;' /app/bin/opt/onlyoffice/desktopeditors/app/onlyoffice-desktopeditors.desktop > /app/share/applications/org.onlyoffice.desktopeditors.desktop",
+                "sed -i -e 's|Exec=/usr/bin/onlyoffice-|Exec=|;' /app/share/applications/org.onlyoffice.desktopeditors.desktop",
                 "sed -i -e '/Actions=/a StartupWMClass=onlyoffice' /app/share/applications/org.onlyoffice.desktopeditors.desktop",
                 "for icon_size in 16 24 32 48 64 128 256; do
                         install -Dm644 /app/bin/opt/onlyoffice/desktopeditors/asc-de-${icon_size}.png /app/share/icons/hicolor/${icon_size}x${icon_size}/apps/org.onlyoffice.desktopeditors.png
