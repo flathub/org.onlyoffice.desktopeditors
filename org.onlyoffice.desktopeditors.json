@@ -16,7 +16,6 @@
         "--filesystem=host",
         "--filesystem=xdg-config/gtk-3.0",
         "--filesystem=/tmp",
-        "--talk-name=org.gtk.vfs",
         "--talk-name=org.gtk.vfs.*",
         "--env=LC_ALL=C.UTF-8",
         "--device=all"
