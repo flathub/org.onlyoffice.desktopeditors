@@ -40,10 +40,10 @@ All steps tested on Ubuntu 18.04
 3. Install a runtime and the matching SDK
 
    ```shell script
-   flatpak install flathub org.freedesktop.Platform//20.08 \
-                   org.freedesktop.Sdk//20.08 \
-                   io.atom.electron.BaseApp//20.08
-                   org.electronjs.Electron2.BaseApp//20.08
+   flatpak install flathub org.freedesktop.Platform//21.08 \
+                   org.freedesktop.Sdk//21.08 \
+                   io.atom.electron.BaseApp//20.08 \
+                   org.electronjs.Electron2.BaseApp//21.08
    ```
 
 4. Build and install the application
