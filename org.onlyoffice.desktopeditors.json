@@ -45,6 +45,7 @@
                     "type": "archive",
                     "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-7.2.0-x64.tar.gz",
                     "sha256": "ff26b7784bb83a86e3d4e2d0621ae90c8eb150fa91b5a5e6c984d425266c259f",
+
                     "strip-components": 0
                 },
                 {
