@@ -26,7 +26,7 @@ It is fully compatible with Office Open XML formats: .docx, .xlsx, .pptx.
 
 ### Build application manually
 
-All steps tested on Ubuntu 18.04
+All steps tested on Ubuntu 18.04 
 
 1. Clone this repo:
 
