@@ -7,6 +7,10 @@ spreadsheet and presentation editors allowing to create, view and edit
 documents stored on your Windows/Linux PC or Mac without an Internet connection.
 It is fully compatible with Office Open XML formats: .docx, .xlsx, .pptx.
 
+**Important** Because of our release process and important check we perform - flatpak
+package always released little bit after deb/rpm/exe packages.
+And sometimes we skip major release if hotfix is coming
+
 ## Quick Setup
 
 ### Install via flathub.org
