@@ -1,9 +1,9 @@
 {
     "app-id": "org.onlyoffice.desktopeditors",
     "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "21.08",
+    "base-version": "22.08",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "21.08",
+    "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "desktopeditors",
     "separate-locales": false,
@@ -16,6 +16,8 @@
         "--filesystem=host",
         "--filesystem=xdg-config/gtk-3.0",
         "--filesystem=/tmp",
+        "--filesystem=xdg-run/gvfs",
+        "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs.*",
         "--env=LC_ALL=C.UTF-8",
         "--device=all"
@@ -35,6 +37,7 @@
                 "sed 's|Icon=.*|Icon=org.onlyoffice.desktopeditors|;' /app/bin/opt/onlyoffice/desktopeditors/app/onlyoffice-desktopeditors.desktop > /app/share/applications/org.onlyoffice.desktopeditors.desktop",
                 "sed -i -e 's|Exec=/usr/bin/onlyoffice-|Exec=|;' /app/share/applications/org.onlyoffice.desktopeditors.desktop",
                 "sed -i -e '/Actions=/a StartupWMClass=onlyoffice' /app/share/applications/org.onlyoffice.desktopeditors.desktop",
+                "echo \"package = flatpak\" > /app/bin/opt/onlyoffice/desktopeditors/converter/package.config",
                 "for icon_size in 16 24 32 48 64 128 256; do
                         install -Dm644 /app/bin/opt/onlyoffice/desktopeditors/asc-de-${icon_size}.png /app/share/icons/hicolor/${icon_size}x${icon_size}/apps/org.onlyoffice.desktopeditors.png
                     done"
@@ -42,8 +45,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-7.1.1-x64.tar.gz",
-                    "sha256": "e8640a2da91435f02c3969d81815b310c0a724cd7545247cc1f8d467fe02fe73",
+                    "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-7.2.1-x64.tar.gz",
+                    "sha256": "4730b108b84959d714c9dcae9a8e1c177c00d7f1f69c9cf90e92572493204b1b",
                     "strip-components": 0
                 },
                 {
