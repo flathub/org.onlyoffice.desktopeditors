@@ -45,8 +45,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-7.2.1-x64.tar.gz",
-                    "sha256": "4730b108b84959d714c9dcae9a8e1c177c00d7f1f69c9cf90e92572493204b1b",
+                    "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-7.3.0-x64.tar.gz",
+                    "sha256": "e8574ecc355cdebf7a8a1f774ee2e2991aa8fea6b3b7a2e6fcc436292f46b0ba",
                     "strip-components": 0
                 },
                 {
@@ -54,6 +54,7 @@
                     "dest-filename": "desktop-editors",
                     "commands": [
                       "export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH",
+                      "export CUSTOM_FONTS_PATH=/run/host/usr/local/share/fonts",
                       "cd /app/bin/opt/onlyoffice/desktopeditors/",
                       "exec ./DesktopEditors \"$@\""
                     ]
