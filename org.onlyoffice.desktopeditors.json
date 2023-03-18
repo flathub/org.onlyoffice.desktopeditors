@@ -13,14 +13,12 @@
         "--socket=wayland",
         "--socket=pulseaudio",
         "--share=network",
-        "--filesystem=host",
         "--filesystem=xdg-config/gtk-3.0",
-        "--filesystem=/tmp",
         "--filesystem=xdg-run/gvfs",
         "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs.*",
         "--env=LC_ALL=C.UTF-8",
-        "--device=all"
+        "--device=dri"
     ],
     "modules": [
         {
@@ -56,7 +54,7 @@
                       "export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH",
                       "export CUSTOM_FONTS_PATH=/run/host/usr/local/share/fonts",
                       "cd /app/bin/opt/onlyoffice/desktopeditors/",
-                      "exec ./DesktopEditors \"$@\""
+                      "exec ./DesktopEditors --xdg-desktop-portal \"$@\""
                     ]
                 },
                 {
