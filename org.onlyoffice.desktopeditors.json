@@ -54,7 +54,6 @@
                     "dest-filename": "desktop-editors",
                     "commands": [
                       "export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH",
-                      "export CUSTOM_FONTS_PATH=/run/host/usr/local/share/fonts",
                       "cd /app/bin/opt/onlyoffice/desktopeditors/",
                       "exec ./DesktopEditors \"$@\""
                     ]
