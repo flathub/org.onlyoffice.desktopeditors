@@ -39,7 +39,7 @@
   <content_rating type="oars-1.1">
   </content_rating>
   <releases>
-    <release version="7.4.1" date="2023-07-31"/>
+    <release version="7.5.0" date="2023-10-19"/>
   </releases>
   <update_contact>nick_at_onlyoffice.com</update_contact>
 </component>

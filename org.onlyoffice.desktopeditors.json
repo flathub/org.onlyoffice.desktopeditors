@@ -45,8 +45,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-7.4.1-x64.tar.xz",
-                    "sha256": "1b075f4cd94b3593eb7986e1a02013fbdb1760626d1c132d5c5fb0e5d1c1feb5",
+                    "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-7.5.0-x64.tar.xz",
+                    "sha256": "aaee83a6be79228a3a7aeccb85fe6a4769480c794b85d0aaf4bba5f4f8f9694f",
                     "strip-components": 0
                 },
                 {
