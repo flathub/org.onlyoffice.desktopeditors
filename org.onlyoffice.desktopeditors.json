@@ -1,9 +1,9 @@
 {
     "app-id": "org.onlyoffice.desktopeditors",
     "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "22.08",
+    "base-version": "23.08",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "desktopeditors",
     "separate-locales": false,
@@ -14,13 +14,13 @@
         "--socket=pulseaudio",
         "--share=network",
         "--filesystem=host",
-        "--filesystem=xdg-config/gtk-3.0",
+        "--filesystem=~/.local/share/gtk-3.0",
         "--filesystem=/tmp",
         "--filesystem=xdg-run/gvfs",
         "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs.*",
         "--env=LC_ALL=C.UTF-8",
-        "--device=all"
+        "--device=dri"
     ],
     "modules": [
         {
