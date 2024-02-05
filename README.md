@@ -1,6 +1,6 @@
 # flatpak - org.onlyoffice.desktopeditors
 
-## Overview
+## Overview 
 
 ONLYOFFICE Desktop Editors is a free office suite that combines text,
 spreadsheet and presentation editors allowing to create, view and edit
