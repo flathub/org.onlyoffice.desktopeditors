@@ -1,9 +1,9 @@
 {
     "app-id": "org.onlyoffice.desktopeditors",
     "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "22.08",
+    "base-version": "23.08",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "desktopeditors",
     "separate-locales": false,
@@ -14,13 +14,13 @@
         "--socket=pulseaudio",
         "--share=network",
         "--filesystem=host",
-        "--filesystem=xdg-config/gtk-3.0",
+        "--filesystem=~/.local/share/gtk-3.0",
         "--filesystem=/tmp",
         "--filesystem=xdg-run/gvfs",
         "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs.*",
         "--env=LC_ALL=C.UTF-8",
-        "--device=all"
+        "--device=dri"
     ],
     "modules": [
         {
@@ -45,8 +45,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-7.5.1-x64.tar.xz",
-                    "sha256": "ba1e0c04a92a1925a48b24e988e9c98c1fa59669a7cd4013f779e292d6d370a4",
+                    "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-8.0.0-x64.tar.xz",
+                    "sha256": "56223457dcfd1564765147d3a8818522b4431a31735f6bc06a388349ab119a21",
                     "strip-components": 0
                 },
                 {
