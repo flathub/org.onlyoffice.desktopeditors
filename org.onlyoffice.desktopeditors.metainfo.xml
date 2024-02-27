@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>org.onlyoffice.desktopeditors</id>
   <name>ONLYOFFICE Desktop Editors</name>
-  <developer id="org.onlyoffice"><name>ONLYOFFICE</name></developer>
+  <developer_name>ONLYOFFICE</developer_name>
   <summary>Office productivity suite</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>AGPL-3.0-only</project_license>
