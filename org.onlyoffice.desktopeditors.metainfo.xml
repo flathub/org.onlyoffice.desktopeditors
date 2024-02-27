@@ -11,7 +11,7 @@
   <description>
     <p>Create, view and edit text documents, spreadsheets and presentations of any size and complexity. Work on documents of most popular formats: DOCX, ODT, XLSX, ODS, CSV, PPTX, ODP, etc. Deal with multiple files within one and the same window thanks to the tab-based user interface.</p>
   </description>
-  <launchable type="desktop-id">onlyoffice-desktopeditors.desktop</launchable>
+  <launchable type="desktop-id">org.onlyoffice.desktopeditors.desktop</launchable>
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/textdocument.jpg</image>
