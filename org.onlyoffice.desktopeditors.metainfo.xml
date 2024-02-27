@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>org.onlyoffice.desktopeditors</id>
   <name>ONLYOFFICE Desktop Editors</name>
-  <developer_name>ONLYOFFICE</developer_name>
+  <developer id="org.onlyoffice"><name>ONLYOFFICE</name></developer>
   <summary>Office productivity suite</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>AGPL-3.0-only</project_license>
@@ -11,6 +11,7 @@
   <description>
     <p>Create, view and edit text documents, spreadsheets and presentations of any size and complexity. Work on documents of most popular formats: DOCX, ODT, XLSX, ODS, CSV, PPTX, ODP, etc. Deal with multiple files within one and the same window thanks to the tab-based user interface.</p>
   </description>
+  <launchable type="desktop-id">onlyoffice-desktopeditors.desktop</launchable>
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/textdocument.jpg</image>
