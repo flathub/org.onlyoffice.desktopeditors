@@ -37,9 +37,7 @@
                 "sed 's|Icon=.*|Icon=org.onlyoffice.desktopeditors|;' usr/share/applications/onlyoffice-desktopeditors.desktop > /app/share/applications/org.onlyoffice.desktopeditors.desktop",
                 "sed -i -e 's|Exec=/usr/bin/onlyoffice-|Exec=|;' /app/share/applications/org.onlyoffice.desktopeditors.desktop",
                 "echo \"package = flatpak\" > /app/bin/opt/onlyoffice/desktopeditors/converter/package.config",
-                "for icon_size in 16 24 32 48 64 128 256; do
-                        install -Dm644 usr/share/icons/hicolor/${icon_size}x${icon_size}/apps/onlyoffice-desktopeditors.png /app/share/icons/hicolor/${icon_size}x${icon_size}/apps/org.onlyoffice.desktopeditors.png
-                    done"
+                "for icon_size in 16 24 32 48 64 128 256; do install -Dm644 usr/share/icons/hicolor/${icon_size}x${icon_size}/apps/onlyoffice-desktopeditors.png /app/share/icons/hicolor/${icon_size}x${icon_size}/apps/org.onlyoffice.desktopeditors.png; done"
             ],
             "sources": [
                 {
