@@ -19,7 +19,7 @@ jobs:
     - name: Check out Git repository
       uses: actions/checkout@v4
       with:
-        ref: release/v8.2.2
+        ref: release/v${{ github.event.inputs.version }}
 
     - name: Replace Version and Build Number
       id: repl
@@ -37,6 +37,6 @@ jobs:
         cat ./org.onlyoffice.desktopeditors.json
         #replace matainfo
         sed -i -r "/release version/s/([0-9]+).([0-9]+).([0-9]+)/${VERSION}/" ./org.onlyoffice.desktopeditors.metainfo.xml
-        sed -i -r "/release version/s/([0-9]+)-([0-9]+)-([0-9]+)/${VERSION}/" ./org.onlyoffice.desktopeditors.metainfo.xml
+        sed -i -r "/release version/s/([0-9]+)-([0-9]+)-([0-9]+)/${DATE}/" ./org.onlyoffice.desktopeditors.metainfo.xml
         cat ./org.onlyoffice.desktopeditors.metainfo.xml
 
