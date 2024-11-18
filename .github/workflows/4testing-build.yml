@@ -19,7 +19,7 @@ jobs:
     - name: Check out Git repository
       uses: actions/checkout@v4
     - run: |
-      git checkout release/v8.2.2
+        git checkout release/v8.2.2
 
     - name: Replace Version and Build Number
       id: repl
