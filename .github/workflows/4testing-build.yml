@@ -29,14 +29,25 @@ jobs:
         DATE=$(date --iso-8601)
         #replace version
         sed -i -r "/url/s/([0-9]+).([0-9]+).([0-9]+)/${VERSION}/" ./org.onlyoffice.desktopeditors.json
+        #replace build number
+        sed -i -r "/url/s/-([0-9]+)-/-${BUILD_NUMBER}-/" ./org.onlyoffice.desktopeditors.json
         #replace link to archive to test
         sed -i -e '/url/s|http://download.onlyoffice.com/install|https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com|' ./org.onlyoffice.desktopeditors.json
         sed -i -e '/url/s|editors/linux|linux/generic|' ./org.onlyoffice.desktopeditors.json
         sed -i -e "/url/s|-x64|-${BUILD_NUMBER}-x86_64|" ./org.onlyoffice.desktopeditors.json
-        #
+        #download file from this url
+        FILE=$(cat ./org.onlyoffice.desktopeditors.json | grep "url" | awk -F'["]' '{print $(NF-1)}')
+        wget $FILE
+        SHASUM=$(sha256sum $(basename $FILE) | awk -F'[ ]' '{print $(1)}')
+        sed -i -r "/sha256/s|\"([0-9a-f]+)\"|\"${SHASUM}\"|" ./org.onlyoffice.desktopeditors.json
+        #test
         cat ./org.onlyoffice.desktopeditors.json
         #replace matainfo
         sed -i -r "/release version/s/([0-9]+).([0-9]+).([0-9]+)/${VERSION}/" ./org.onlyoffice.desktopeditors.metainfo.xml
         sed -i -r "/release version/s/([0-9]+)-([0-9]+)-([0-9]+)/${DATE}/" ./org.onlyoffice.desktopeditors.metainfo.xml
+        #test
         cat ./org.onlyoffice.desktopeditors.metainfo.xml
+        #
+        git commit -m "Update version to ${VERSION}-${BUILD_NUMBER}"
+        git push
 
