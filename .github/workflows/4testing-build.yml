@@ -50,4 +50,6 @@ jobs:
         #
         git commit -m "Update version to ${VERSION}-${BUILD_NUMBER}"
         git push
+      with:
+        token: ${{ secrets.GH_TOKEN }}
 
