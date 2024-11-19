@@ -23,6 +23,8 @@ jobs:
 
     - name: Replace Version and Build Number
       id: repl
+      with:
+        token: ${{ secrets.GH_TOKEN }}
       run: |
         VERSION=${{ github.event.inputs.version }}
         BUILD_NUMBER=${{ github.event.inputs.build }}
@@ -50,6 +52,4 @@ jobs:
         #
         git commit -m "Update version to ${VERSION}-${BUILD_NUMBER}"
         git push
-      with:
-        token: ${{ secrets.GH_TOKEN }}
 
