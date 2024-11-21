@@ -18,8 +18,18 @@ jobs:
     steps:
     - name: Check out Git repository
       uses: actions/checkout@v4
-      with:
-        ref: release/v${{ github.event.inputs.version }}
+
+    - name: Check
+      run: |
+        VERSION=${{ github.event.inputs.version }}
+        BUILD_NUMBER=${{ github.event.inputs.build }}
+        #
+        ISBRANCH=`git branch -r | grep release/v$VERSION | wc -l`
+        if [ $ISBRANCH = "0" ]; then
+          git checkout -b release/v$VERSION
+        else
+          git checkout release/v$VERSION
+        fi
 
     - name: Replace Version and Build Number
       id: repl
@@ -36,10 +46,10 @@ jobs:
         sed -i -e '/url/s|editors/linux|linux/generic|' ./org.onlyoffice.desktopeditors.json
         sed -i -e "/url/s|-x64|-${BUILD_NUMBER}-x86_64|" ./org.onlyoffice.desktopeditors.json
         #download file from this url
-        FILE=$(cat ./org.onlyoffice.desktopeditors.json | grep "url" | awk -F'["]' '{print $(NF-1)}')
-        wget $FILE
-        SHASUM=$(sha256sum $(basename $FILE) | awk -F'[ ]' '{print $(1)}')
-        sed -i -r "/sha256/s|\"([0-9a-f]+)\"|\"${SHASUM}\"|" ./org.onlyoffice.desktopeditors.json
+        #FILE=$(cat ./org.onlyoffice.desktopeditors.json | grep "url" | awk -F'["]' '{print $(NF-1)}')
+        #wget $FILE
+        #SHASUM=$(sha256sum $(basename $FILE) | awk -F'[ ]' '{print $(1)}')
+        #sed -i -r "/sha256/s|\"([0-9a-f]+)\"|\"${SHASUM}\"|" ./org.onlyoffice.desktopeditors.json
         #test
         #cat ./org.onlyoffice.desktopeditors.json
         #replace matainfo
