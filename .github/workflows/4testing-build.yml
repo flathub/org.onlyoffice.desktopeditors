@@ -26,8 +26,10 @@ jobs:
         #
         ISBRANCH=`git branch -r | grep release/v$VERSION | wc -l`
         if [ $ISBRANCH = "0" ]; then
+          echo "New branch"
           git checkout -b release/v$VERSION
         else
+          echo "Old branch"
           git checkout release/v$VERSION
         fi
 
