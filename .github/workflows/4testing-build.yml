@@ -25,7 +25,8 @@ jobs:
         BUILD_NUMBER=${{ github.event.inputs.build }}
         #
         ISBRANCH=`git branch -r | grep release/v$VERSION | wc -l`
-        if [ $ISBRANCH = "0" ]; then
+        echo "$ISBRANCH"
+        if [ $ISBRANCH -eq "0" ]; then
           echo "New branch"
           git checkout -b release/v$VERSION
         else
