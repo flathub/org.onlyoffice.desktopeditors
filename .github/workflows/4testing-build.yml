@@ -16,14 +16,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out Git repository
-      uses: actions/checkout@v4
-
     - name: Check
       run: |
         VERSION=${{ github.event.inputs.version }}
         BUILD_NUMBER=${{ github.event.inputs.build }}
         #
+        git clone git@github.com:romandemidov/org.onlyoffice.desktopeditors.git
         git branch -r
         ISBRANCH=`git branch -r | grep release/v$VERSION | wc -l`
         echo "$ISBRANCH"
