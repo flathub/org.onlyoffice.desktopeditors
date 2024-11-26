@@ -1,5 +1,7 @@
 name: Update pull request for flatpak
 
+run-name: Build ONLYOFFICE_DesktopEditors-${{ github.event.inputs.version }}-${{ github.event.inputs.build }}
+
 on:
   workflow_dispatch:
     inputs:
@@ -40,17 +42,12 @@ jobs:
         wget $FILE
         SHASUM=$(sha256sum $(basename $FILE) | awk -F'[ ]' '{print $(1)}')
         sed -i -r "/sha256/s|\"([0-9a-f]+)\"|\"${SHASUM}\"|" ./org.onlyoffice.desktopeditors.json
-        #test
-        #cat ./org.onlyoffice.desktopeditors.json
         #replace matainfo
         sed -i -r "/release version/s/([0-9]+).([0-9]+).([0-9]+)/${VERSION}/" ./org.onlyoffice.desktopeditors.metainfo.xml
         sed -i -r "/release version/s/([0-9]+)-([0-9]+)-([0-9]+)/${DATE}/" ./org.onlyoffice.desktopeditors.metainfo.xml
-        #test
-        #cat ./org.onlyoffice.desktopeditors.metainfo.xml
         #commit changes
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        #git add .
         git commit -m "Update version to ${VERSION}-${BUILD_NUMBER}" -a
         git push
 
