@@ -42,8 +42,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux/generic/onlyoffice-desktopeditors-8.2.2-20-x86_64.tar.xz",
-                    "sha256": "2780d18d6e1cdcad5096f4628120b7d93306f3dba54919840390da6cf9eadb94",
+                    "url": "https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux/generic/onlyoffice-desktopeditors-8.2.2-21-x86_64.tar.xz",
+                    "sha256": "2e9ab2fc3dec026747774b7fce91f7f3404ea2ee3fc5d566c486bf0383363d20",
                     "strip-components": 0
                 },
                 {
