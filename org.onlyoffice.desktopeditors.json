@@ -12,7 +12,6 @@
         "--socket=x11",
         "--socket=wayland",
         "--socket=pulseaudio",
-        "--share=network",
         "--filesystem=host",
         "--filesystem=~/.local/share/gtk-3.0",
         "--filesystem=/tmp",
