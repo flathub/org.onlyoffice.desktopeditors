@@ -21,7 +21,7 @@ jobs:
     - name: Check out Git repository
       uses: actions/checkout@v4
       with:
-        ref: release/v${{ github.event.inputs.version }}
+        ref: ${{ endsWith( github.event.inputs.version, '.0') == 1 && 'release' || 'hotfix' }}/v${{ github.event.inputs.version }}
 
     - name: Replace Version and Build Number
       id: repl
