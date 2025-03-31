@@ -42,8 +42,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux/generic/onlyoffice-desktopeditors-9.0.0-29-x86_64.tar.xz",
-                    "sha256": "2fc368b67838e40548a738ee3ddd4b209ab72f4766044d67fe86041e9008c68c",
+                    "url": "https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux/generic/onlyoffice-desktopeditors-9.0.0-30-x86_64.tar.xz",
+                    "sha256": "a77158efda2780a4b0973191e92424101dc8d69421b1849b3a0c85790be5f54f",
                     "strip-components": 0
                 },
                 {
