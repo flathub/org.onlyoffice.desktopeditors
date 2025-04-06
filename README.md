@@ -38,19 +38,25 @@ And sometimes we skip major release if hotfix is coming
    ```
 
 2. Install `flatpak` runtime on your system according to [instruction](https://flathub.org/setup)
-3. Install `org.flatpak.Builder` according to [instruction](https://docs.flathub.org/docs/for-app-authors/submission#build-and-install)
+3. Add the Flathub repo user-wide
+
+   ```shell script
+   flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+   ```
+
+4. Install `org.flatpak.Builder` according to [instruction](https://docs.flathub.org/docs/for-app-authors/submission#build-and-install)
 
    ```shell script
    flatpak install -y flathub org.flatpak.Builder
    ```
 
-4. Build and install the application
+5. Build and install the application
 
    ```shell script
    flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir org.onlyoffice.desktopeditors.json
    ```
 
-5. Run the application
+6. Run the application
 
    ```shell script
    flatpak run org.onlyoffice.desktopeditors
