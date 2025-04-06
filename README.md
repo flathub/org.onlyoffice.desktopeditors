@@ -15,7 +15,7 @@ And sometimes we skip major release if hotfix is coming
 
 ### Install via flathub.org
 
-1. Install flatpak runtime on your system according to [instruction](https://flatpak.org/setup/)
+1. Install `flatpak` runtime on your system according to [instruction](https://flathub.org/setup)
 2. Install application via
 
    ```shell script
@@ -30,8 +30,6 @@ And sometimes we skip major release if hotfix is coming
 
 ### Build application manually
 
-All steps tested on Ubuntu 18.04
-
 1. Clone this repo:
 
    ```shell script
@@ -39,21 +37,17 @@ All steps tested on Ubuntu 18.04
    cd org.onlyoffice.desktopeditors
    ```
 
-2. Install `flatpak` and `flatpak-builder` according to [instruction](https://flatpak.org/setup/)
-
-3. Install a runtime and the matching SDK
+2. Install `flatpak` runtime on your system according to [instruction](https://flathub.org/setup)
+3. Install `org.flatpak.Builder` according to [instruction](https://docs.flathub.org/docs/for-app-authors/submission#build-and-install)
 
    ```shell script
-   flatpak install flathub org.freedesktop.Platform//23.08 \
-                   org.freedesktop.Sdk//23.08 \
-                   io.atom.electron.BaseApp//20.08 \
-                   org.electronjs.Electron2.BaseApp//23.08
+   flatpak install -y flathub org.flatpak.Builder
    ```
 
 4. Build and install the application
 
    ```shell script
-   flatpak-builder build org.onlyoffice.desktopeditors.json --force-clean --install
+   flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir org.onlyoffice.desktopeditors.json
    ```
 
 5. Run the application
