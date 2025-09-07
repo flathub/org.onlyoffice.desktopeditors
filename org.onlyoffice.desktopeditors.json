@@ -21,7 +21,7 @@
         "--talk-name=org.gtk.vfs.*",
         "--env=LC_ALL=C.UTF-8",
         "--device=dri",
-        "env=XCURSOR_PATH=~/.icons:/app/share/icons:/icons:/run/host/user-share/icons:/run/host/share/icons"
+        "--env=XCURSOR_PATH=~/.icons:/app/share/icons:/icons:/run/host/user-share/icons:/run/host/share/icons"
     ],
     "modules": [
         {
