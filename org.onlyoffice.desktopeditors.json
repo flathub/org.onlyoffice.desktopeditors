@@ -20,7 +20,8 @@
         "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs.*",
         "--env=LC_ALL=C.UTF-8",
-        "--device=dri"
+        "--device=dri",
+        "env=XCURSOR_PATH=~/.icons:/app/share/icons:/icons:/run/host/user-share/icons:/run/host/share/icons"
     ],
     "modules": [
         {
