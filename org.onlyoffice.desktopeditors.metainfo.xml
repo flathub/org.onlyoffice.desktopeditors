@@ -18,24 +18,36 @@
   <launchable type="desktop-id">org.onlyoffice.desktopeditors.desktop</launchable>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/Connect_to_cloud.png</image>
-      <caption>Connect to cloud</caption>
+      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/Home_Dark.png</image>
+      <caption>Home</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/Document_editor.png</image>
-      <caption>Document editor</caption>
+      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/AI_Agent_Dark.png</image>
+      <caption>AI Agent</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/PDF_editor.png</image>
-      <caption>PDF editor</caption>
+      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/Docs.png</image>
+      <caption>Docs</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/Presentation_editor.png</image>
-      <caption>Presentation editor</caption>
+      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/PDF_Editor.png</image>
+      <caption>PDF Editor</caption>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/Spreadsheet_editor.png</image>
-      <caption>Spreadsheet editor</caption>
+      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/Sheets.png</image>
+      <caption>Sheets</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/Slides.png</image>
+      <caption>Slides</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/Diagram_Viewer.png</image>
+      <caption>Diagram Viewer</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/flathub/org.onlyoffice.desktopeditors/master/screenshots/Templates.png</image>
+      <caption>Templates</caption>
     </screenshot>
   </screenshots>
   <kudos>
