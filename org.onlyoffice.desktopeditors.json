@@ -42,8 +42,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-9.2.0-x64.tar.xz",
-                    "sha256": "ed74ce9ffff9d64ee02022d25e334b3f8415d7371179c48ada3d543d6d4e1922",
+                    "url": "https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux/generic/onlyoffice-desktopeditors-9.2.1-1-x86_64.tar.xz",
+                    "sha256": "d34810b8d0837701cab3633d4069f0a759be3ac5d229aa2d6499d58b8bfe9d5b",
                     "strip-components": 0
                 },
                 {
