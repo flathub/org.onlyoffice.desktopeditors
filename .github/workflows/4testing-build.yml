@@ -37,11 +37,20 @@ jobs:
         sed -i -e '/url/s|http://download.onlyoffice.com/install|https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com|' ./org.onlyoffice.desktopeditors.json
         sed -i -e '/url/s|editors/linux|linux/generic|' ./org.onlyoffice.desktopeditors.json
         sed -i -e "/url/s|-x64|-${BUILD_NUMBER}-x86_64|" ./org.onlyoffice.desktopeditors.json
+        sed -i -e "/url/s|-aarch64|-${BUILD_NUMBER}-aarch64|" ./org.onlyoffice.desktopeditors.json
         #download file from this url
-        FILE=$(cat ./org.onlyoffice.desktopeditors.json | grep "url" | awk -F'["]' '{print $(NF-1)}')
-        wget $FILE
-        SHASUM=$(sha256sum $(basename $FILE) | awk -F'[ ]' '{print $(1)}')
-        sed -i -r "/sha256/s|\"([0-9a-f]+)\"|\"${SHASUM}\"|" ./org.onlyoffice.desktopeditors.json
+        FILES=$(cat ./org.onlyoffice.desktopeditors.json | grep "url" | awk -F'["]' '{print $(NF-1)}')
+        FILE_AMD64=$(echo $FILES | grep x64)
+        FILE_ARM64=$(echo $FILES | grep aarch64)
+        wget $FILE_AMD64
+        wget $FILE_ARM64
+        #replace shasums
+        SHASUM_AMD64=$(sha256sum $(basename $FILE_AMD64) | awk -F'[ ]' '{print $(1)}')
+        SHASUM_ARM64=$(sha256sum $(basename $FILE_ARM64) | awk -F'[ ]' '{print $(1)}')
+        OLD_SHASUM_AMD64=$(cat ./org.onlyoffice.desktopeditors.json | grep only-arches.*x86_64 -C 2 | grep sha256 | awk -F'"' '{print $4}')
+        OLD_SHASUM_ARM64=$(cat ./org.onlyoffice.desktopeditors.json | grep only-arches.*aarch64 -C 2 | grep sha256 | awk -F'"' '{print $4}')
+        sed -i -r "s|OLD_SHASUM_AMD64|SHASUM_AMD64|" ./org.onlyoffice.desktopeditors.json
+        sed -i -r "s|OLD_SHASUM_ARM64|SHASUM_ARM64|" ./org.onlyoffice.desktopeditors.json
         #replace matainfo
         sed -i -r "/release version/s/([0-9]+).([0-9]+).([0-9]+)/${VERSION}/" ./org.onlyoffice.desktopeditors.metainfo.xml
         sed -i -r "/release version/s/([0-9]+)-([0-9]+)-([0-9]+)/${DATE}/" ./org.onlyoffice.desktopeditors.metainfo.xml
