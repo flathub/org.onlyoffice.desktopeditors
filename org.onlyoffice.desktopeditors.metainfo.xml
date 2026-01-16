@@ -57,7 +57,7 @@
   <content_rating type="oars-1.1">
   </content_rating>
   <releases>
-    <release version="9.3.0" date="2026-01-15"/>
+    <release version="9.3.0" date="2026-01-16"/>
   </releases>
   <update_contact>nick_at_onlyoffice.com</update_contact>
 </component>
