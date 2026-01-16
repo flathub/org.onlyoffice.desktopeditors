@@ -1,0 +1,55 @@
+name: Duplicate Issue and Close Original
+
+on:
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: "Issue number to duplicate"
+        required: true
+      target_repo:
+        description: "Target repo (org/repo)"
+        required: true
+
+jobs:
+  duplicate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Duplicate issue and close original
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          ISSUE_NUMBER: ${{ github.event.inputs.issue_number }}
+          TARGET_REPO: ${{ github.event.inputs.target_repo }}
+          SOURCE_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "Reading issue #$ISSUE_NUMBER from $SOURCE_REPO"
+
+          TITLE=$(gh issue view "$ISSUE_NUMBER" \
+            --repo "$SOURCE_REPO" \
+            --json title \
+            --jq '.title')
+
+          BODY=$(gh issue view "$ISSUE_NUMBER" \
+            --repo "$SOURCE_REPO" \
+            --json body \
+            --jq '.body')
+
+          echo "Creating duplicate issue in $TARGET_REPO"
+
+          DUPLICATE_BODY="$(printf "%s\n\nDuplicate of %s#%s" \
+            "$BODY" "$SOURCE_REPO" "$ISSUE_NUMBER")"
+
+          gh issue create \
+            --repo "$TARGET_REPO" \
+            --title "$TITLE" \
+            --body "$DUPLICATE_BODY"
+
+          echo "Closing original issue #$ISSUE_NUMBER in $SOURCE_REPO"
+
+          gh issue close "$ISSUE_NUMBER" \
+            --repo "$SOURCE_REPO" \
+            --comment "Closed after duplication to $TARGET_REPO"
+
