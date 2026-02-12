@@ -7,6 +7,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>AGPL-3.0-only</project_license>
   <url type="homepage">https://onlyoffice.com</url>
+  <url type="vcs-browser">https://github.com/flathub/org.onlyoffice.desktopeditors/url>
   <icon type="remote" height="256" width="256">https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_72,h_72/https://dashboard.snapcraft.io/site_media/appmedia/2018/01/icon_IzCN8xA.png</icon>
   <description>
     <p>ONLYOFFICE Desktop Editors is a free and open-source office suite pack that comprises editors for text documents, spreadsheets, presentations, PDFs and PDF forms, along with a Diagram Viewer. It allows you to create, view and edit office docs stored on your Windows/Linux PC or Mac without an Internet connection. The suite is fully compatible with Office Open XML formats: .docx, .xlsx, .pptx.</p>
@@ -56,7 +57,7 @@
   <content_rating type="oars-1.1">
   </content_rating>
   <releases>
-    <release version="9.2.1" date="2025-12-30"/>
+    <release version="9.3.0" date="2026-02-12"/>
   </releases>
   <update_contact>nick_at_onlyoffice.com</update_contact>
 </component>
