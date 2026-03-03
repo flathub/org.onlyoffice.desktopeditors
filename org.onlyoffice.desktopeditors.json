@@ -43,15 +43,15 @@
                 {
                     "type": "archive",
                     "only-arches": ["x86_64"],
-                    "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-9.3.0-x64.tar.xz",
-                    "sha256": "29d5a2cf34ed130b88bac6459d3f75db1b0b70a113a27eaa7a7156fa183750df",
+                    "url": "https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux/generic/onlyoffice-desktopeditors-9.3.1-8-x86_64.tar.xz",
+                    "sha256": "61d79bae5151540a28874dc6fcc7a47fb5df097bab601e6d5b75c1551b6968f0",
                     "strip-components": 0
                 },
                 {
                     "type": "archive",
                     "only-arches": ["aarch64"],
-                    "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-9.3.0-aarch64.tar.xz",
-                    "sha256": "d0dad20d132ff6536666f4784972fa6eb3d1e8f63d316edeac3ce9bfac23862a",
+                    "url": "https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux/generic/onlyoffice-desktopeditors-9.3.1-8-aarch64.tar.xz",
+                    "sha256": "50d75098ee322b9cbc58dd11a5ce9e2dd9e8a1f72050830a7afd51900aa6a831",
                     "strip-components": 0
                 },
                 {
