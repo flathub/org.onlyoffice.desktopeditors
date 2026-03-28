@@ -43,15 +43,15 @@
                 {
                     "type": "archive",
                     "only-arches": ["x86_64"],
-                    "url": "https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux/generic/onlyoffice-desktopeditors-9.4.0-33-x86_64.tar.xz",
-                    "sha256": "a31285e5f19d3a39ab6ef691c8d83b013568f7b5ee23ab158df6a7260ec6f31c",
+                    "url": "https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux/generic/onlyoffice-desktopeditors-9.4.0-34-x86_64.tar.xz",
+                    "sha256": "3558cb1e6b5418b2bf6d622e32e741e10a27f0c9efa9217e095ef9ffc2a33cba",
                     "strip-components": 0
                 },
                 {
                     "type": "archive",
                     "only-arches": ["aarch64"],
-                    "url": "https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux/generic/onlyoffice-desktopeditors-9.4.0-33-aarch64.tar.xz",
-                    "sha256": "bf3c515cf24c992ff676f3b6d800f7f003c12c23851ef69bcba8d7a59003849f",
+                    "url": "https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux/generic/onlyoffice-desktopeditors-9.4.0-34-aarch64.tar.xz",
+                    "sha256": "a322b4ad92a34dd8c870aeb0c005e067d7a92f434e3ba64b9833475d1285e3ea",
                     "strip-components": 0
                 },
                 {
