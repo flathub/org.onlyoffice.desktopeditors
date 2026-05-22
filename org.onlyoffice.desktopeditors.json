@@ -44,7 +44,7 @@
                     "type": "archive",
                     "only-arches": ["x86_64"],
                     "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-9.4.0-x64.tar.xz",
-                    "sha256": "20f90a0c96dcf6dd03fa5484e840498b1bd796ece59bf1525af6e98143e6bca5",
+                    "sha256": "d054d35f6c11274755cdad32683e8238f886420756c6cdcbf68c3b89ea66675c",
                     "strip-components": 0
                 },
                 {
