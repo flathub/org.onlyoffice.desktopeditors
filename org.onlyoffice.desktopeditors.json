@@ -1,9 +1,9 @@
 {
     "app-id": "org.onlyoffice.desktopeditors",
     "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "24.08",
+    "base-version": "25.08",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "desktopeditors",
     "separate-locales": false,
@@ -42,8 +42,16 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-8.3.2-x64.tar.xz",
-                    "sha256": "baeab8821c8bc05c08436d4c191a16a751cdae24274cbd1994e9cd944bc0d0fc",
+                    "only-arches": ["x86_64"],
+                    "url": "https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-10.0.0-x64.tar.xz",
+                    "sha256": "b44158be6499c6fb3813b5904d000f72ef4d93c0e8f6ea6696501e575995da9a",
+                    "strip-components": 0
+                },
+                {
+                    "type": "archive",
+                    "only-arches": ["aarch64"],
+                    "url": "https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors-10.0.0-aarch64.tar.xz",
+                    "sha256": "d1276a052a5fb9d8a2ede6ab52c7f75aa5bcc2f6f01c6a0de258da0b886a1ff7",
                     "strip-components": 0
                 },
                 {
